@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Displaced Individuals Barrier Analysis</title>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="data.js"></script>
+    <script src="helpers.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron" style="margin-top:1em">
+        <h3 class="display-4">Displaced Individuals Barrier Analysis</h3>
+        <hr class="my-4">
+        <p>Survey taken on 20th of April 2020</p>
+        <a href="https://diba.scottygustavo.repl.co" type="button" class="btn btn-info">Compact Version</a>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="age" width="800" height="450"></canvas>
+        </div>
+        <div class="card-footer text-muted">
+          <small class="text-muted"><b>Below 65:</b> <span id="below65"></span></small> <br>
+          <small class="text-muted"><b>Above 65:</b> <span id="above65"></span></small>
+        </div>
+      </div>
+      
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="stayIn" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="reasonLeft" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="comorb" width="800" height="800"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="perSever" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="perRisk" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <!-- <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="eight" width="800" height="450"></canvas>
+        </div>
+      </div> -->
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="perEfficacy" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="stayInAbility" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="howEasyToStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="easierToStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="howDifficultToStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="difficultToStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="stayingAdvant" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="stayingDisadvant" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="stayImportance" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="approveStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+
+      <div class="card bg-light mb-3">
+        <div class="card-body">
+          <canvas id="disapproveStay" width="800" height="450"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
